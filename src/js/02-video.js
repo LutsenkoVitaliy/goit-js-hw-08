@@ -5,14 +5,12 @@ const player = new Vimeo.Player(iframe);
 const onUpdate = data => {
     localStorage.setItem("videoplayer-current-time", data.seconds);
 };
-player.on('timeupdate', onUpdate);
+player.on('timeupdate', throttle(onUpdate, 1000));
 
 const time = localStorage.getItem("videoplayer-current-time");
 player.setCurrentTime(time)
-    .then(seconds => {
-        console.log('hello world');
-    })
-    .catch(() => console.log(oshibka));
+     
+     
 
 
 
