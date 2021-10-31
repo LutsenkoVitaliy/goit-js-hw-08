@@ -16,6 +16,9 @@ player.setCurrentTime(time)
 
 
 
+
+
+
 // function populateStorage() {
 //   localStorage.setItem("videoplayer-current-time", "oficiant gay");
 // }
