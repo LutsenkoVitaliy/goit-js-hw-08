@@ -27,4 +27,8 @@ const galleryRef = document.querySelector('.gallery')
 const imgGalleryEl = galleryItems.map(renderGallery).join('') 
 galleryRef.insertAdjacentHTML('beforeend', imgGalleryEl)
 
-new SimpleLightbox('.gallery a');
+new SimpleLightbox('.gallery a', {
+  fadeSpeed: 200,
+  animationSpeed: 350,
+  captionsData: "alt",
+ });
